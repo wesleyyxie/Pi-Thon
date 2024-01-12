@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PI-THON</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="hder">
+            <h1>PI-THON</h1>
+            <h2>CAN YOU BEAT RAJVEER MEENA?</h2>
+        </div>
+        <div class="gameContainer" style="height: 400px">
+            <button id="startButton" style="display: none" onClick="start()">START</button>
+            <div id="startedContainer">
+                <span id="score">Score: 0</span> 
+                <div id="memoryBox">
+                    <div id="piNumbers">
+                      <span id="previousDigits">3.</span></span><span id="inputAnim"></span>
+                    </div>
+                </div>
+                <div id="barContainer">
+                    <div id="bar"></div>
+                </div>
+                <button class="restartButton" onClick="resetGame()"><i class="fa fa-repeat"></i></button>
+            </div>
+            <div id="gameOverContainer" style="display: none">
+                <label id="gameOverMsg"></label>
+                <button class="restartButton" onClick="resetGame()"><i class="fa fa-repeat"></i></button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+    

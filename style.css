@@ -1,0 +1,112 @@
+body{
+    background-color: rgb(199, 198, 198);
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+span {
+    white-space: pre-wrap;
+  }
+
+#hder{
+    text-align: center;
+}
+  
+.gameContainer{
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+    margin: 30px;
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 130px;
+}
+
+#startedContainer{
+    overflow: hidden;
+    height: 400px;
+    width: 1100px;
+
+}
+#memoryBox{
+    text-align: center;
+    height: 264px;
+    top: 45px;
+    position:relative;
+}
+#piNumbers{
+    top: 80px;
+    display: inline-block;
+    
+}
+
+#inputAnim{
+
+    display: inline-block;
+    margin-left:0;
+}
+
+.anim{
+    animation: pulse 0.1s linear 1;
+}
+@keyframes pulse {
+    25% {transform: scale(1.0);}
+    75% {transform: scale(1.36)}
+}
+
+#previousDigits{
+    letter-spacing: 3px;
+    display: contents;
+}
+
+#digit{
+    position:absolute;
+    bottom: 30px;
+    left: 50%;
+    size: 30px;
+}
+
+#score{
+    position: absolute;
+    right: 30px;
+}
+
+#barContainer{
+    position: absolute;
+    width: 1100px;
+    text-align: center;
+    bottom: 35px;
+}
+
+#bar{
+    display: inline-block;
+    height: 30px;
+    width: 1100px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 25px;
+}
+
+.squeeze{
+    transition: width 5s linear;
+}
+
+.restartButton{
+    border: 0;
+    bottom: 0;
+    left: 537px;
+    position: absolute;
+    font-size: 24px;
+    background-color: transparent;
+    color:rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    outline: none;
+}
+.restartButton:active{
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+.restartButton:hover{
+    color:rgb(100, 100, 100);
+}
