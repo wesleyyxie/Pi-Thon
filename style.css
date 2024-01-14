@@ -1,10 +1,10 @@
 body{
-    background-color: rgb(199, 198, 198);
+    background-color: rgba(34, 38, 42);
     font-family: 'Roboto', sans-serif;
-    color: rgba(0, 0, 0, 0.7);
     text-align: center;
     min-height: 100vh;
     margin: 0;
+    color:rgb(245, 255, 245);
 }
 
 span {
@@ -14,11 +14,16 @@ span {
 #hder{
     text-align: center;
 }
+
+#title{
+    color:rgb(80, 200, 192)
+}
   
 .gameContainer{
     position: relative;
     max-width: 1100px;
     width: 100%;
+    height: 450px;
     margin: 30px;
     font-size: 30px;
     display: inline-block;
@@ -27,24 +32,31 @@ span {
 
 #startedContainer{
     overflow: hidden;
-    height: 400px;
+    height: 450px;
     width: 1100px;
-
 }
 #memoryBox{
     text-align: center;
-    height: 264px;
+    height: 255px;
     top: 45px;
     position:relative;
+    overflow-y: hidden;
 }
 #piNumbers{
-    top: 80px;
     display: inline-block;
-    
 }
 
-#inputAnim{
+#blinkingCursor{
+    opacity: 1;
+    animation: blinker 1s linear infinite;
+}
 
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+#inputAnim{
     display: inline-block;
     margin-left:0;
 }
@@ -74,18 +86,20 @@ span {
     right: 30px;
 }
 
+
 #barContainer{
     position: absolute;
     width: 1100px;
     text-align: center;
-    bottom: 35px;
+    bottom: 75px;
 }
 
 #bar{
     display: inline-block;
     height: 30px;
     width: 1100px;
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(80, 200, 192);
+    box-shadow: 5px 5px rgba(245, 255, 245);
     border-radius: 25px;
 }
 
@@ -100,13 +114,24 @@ span {
     position: absolute;
     font-size: 24px;
     background-color: transparent;
-    color:rgba(0, 0, 0, 0.7);
+    color:rgb(80, 200, 192);
     cursor: pointer;
     outline: none;
 }
 .restartButton:active{
-    color: rgba(0, 0, 0, 0.7) !important;
+    color: rgb(80, 200, 192) !important;
 }
 .restartButton:hover{
-    color:rgb(100, 100, 100);
+    color:rgb(245, 255, 245);
+}
+
+#gameOverContainer{
+    height: 400px; 
+    width: 1100px;
+}
+
+#tipsContainer{
+    font-size: 20px;
+    height: 150px;
+    width: 100%;
 }

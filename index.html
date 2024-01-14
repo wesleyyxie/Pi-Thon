@@ -10,16 +10,16 @@
     </head>
     <body>
         <div id="hder">
-            <h1>PI-THON</h1>
-            <h2>CAN YOU BEAT RAJVEER MEENA?</h2>
+            <h1 id = "title" style="font-size: 60px;">PI-THON</h1>
+            <h2 id = "raj">CAN YOU BEAT RAJVEER MEENA?</h2>
         </div>
-        <div class="gameContainer" style="height: 400px">
+        <div class="gameContainer">
             <button id="startButton" style="display: none" onClick="start()">START</button>
             <div id="startedContainer">
                 <span id="score">Score: 0</span> 
                 <div id="memoryBox">
                     <div id="piNumbers">
-                      <span id="previousDigits">3.</span></span><span id="inputAnim"></span>
+                      <span id="previousDigits">3.</span></span><span id="inputAnim"></span><span id="blinkingCursor">_</span>
                     </div>
                 </div>
                 <div id="barContainer">
@@ -29,9 +29,13 @@
             </div>
             <div id="gameOverContainer" style="display: none">
                 <label id="gameOverMsg"></label>
-                <button class="restartButton" onClick="resetGame()"><i class="fa fa-repeat"></i></button>
+                <button class="restartButton" id="gameOverRestart" onClick="resetGame()"><i class="fa fa-repeat"></i></button>
             </div>
+        </div>
+        <div id="tipsContainer">
+            <p>Tips:</p>
+            <p>Press "r" to restart the game</p>
+            <p>The first two numbers are 1 and 2</p>
         </div>
         <script src="index.js"></script>
     </body>
-    
